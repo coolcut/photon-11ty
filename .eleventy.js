@@ -2,6 +2,8 @@ const fs = require("fs");
 const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(false);
+
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,

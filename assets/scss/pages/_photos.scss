@@ -4,7 +4,23 @@
 .photo-grid {
   display: grid;
   grid-gap: var(--spacer-4);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1920px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .photo-grid-item {
@@ -65,18 +81,14 @@
 
 .photo-grid-item__date {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
+  left: var(--spacer-3);
+  bottom: var(--spacer-3);
 
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 20px;
-
+  font-size: var(--type-scale-8);
+  line-height: var(--leading-tight);
   visibility: hidden;
-
   letter-spacing: 0.05em;
   text-transform: uppercase;
-
   color: #ffffff;
   z-index: 20;
 }
