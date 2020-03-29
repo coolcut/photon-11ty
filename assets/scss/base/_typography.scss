@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------------
+||  Typography
+------------------------------------------------------------------- */
+:root {
+  font-size: var(--type-scale-6);
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--leading-normal);
+}
+
+p {
+  margin: 0 0 var(--spacer-4);
+}
+
+a {
+  color: var(--highlight-color);
+
+  &:hover {
+    color: var(--highlight-color);
+    text-decoration-color: var(--highlight-color);
+  }
+}
+
+/* ------------------------------------------------------------------
+||  Headlines
+------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 var(--spacer-4);
+}
