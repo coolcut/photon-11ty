@@ -1,0 +1,18 @@
+{
+  "name": "minne-11ty",
+  "version": "0.1.0",
+  "description": "This is a 11ty implementation of the minne photo blog",
+  "main": "index.js",
+  "repository": "git@github.com:useminne/minne-11ty.git",
+  "author": "Jan Früchtl <jan@fruechtl.me>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "markdown-it": "^10.0.0",
+    "moment": "^2.24.0"
+  }
+}
