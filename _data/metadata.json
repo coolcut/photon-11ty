@@ -5,5 +5,9 @@
   "slogan": "My personal stream of photos.",
   "author": {
     "name": "<Your Name>"
+  },
+  "seo": {
+    "title": "A Photo Blog",
+    "description": "<Your SEO description>"
   }
 }

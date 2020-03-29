@@ -1,5 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 const cssnano = require('gulp-cssnano');
 const responsive = require('gulp-responsive');
 const autoprefixer = require('gulp-autoprefixer');
@@ -11,6 +13,15 @@ gulp.task('css', function() {
     .pipe(cssnano())
     .on('error', sass.logError)
     .pipe(gulp.dest('./_includes/css'));
+});
+
+gulp.task('js', function() {
+  return gulp.src('./assets/js/main.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./_includes/js'));
 });
 
 gulp.task('images', function () {
@@ -64,8 +75,9 @@ gulp.task('images', function () {
 
 gulp.task("watch", function() {
   gulp.watch('./assets/scss/**/*.scss', gulp.parallel('css'));
+  gulp.watch('./assets/js/**/*.js', gulp.parallel('js'));
   gulp.watch('./uploads/**/*.{png,jpg}', gulp.parallel('images'));
 });
 
-gulp.task('dev', gulp.parallel('css'));
+gulp.task('dev', gulp.parallel('css', 'js'));
 gulp.task('build', gulp.parallel('css', 'images'));
