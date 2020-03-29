@@ -1,3 +1,7 @@
 ---
 layout: layouts/bones.njk
 ---
+
+<figure>
+  <img srcset='{{ imageSource | photoSrcset }}' src="{{ imageSource | photoSrc }}" alt="{{ imageAlt }}">
+</figure>

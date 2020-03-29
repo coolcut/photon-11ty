@@ -26,22 +26,30 @@ gulp.task('images', function () {
         width: 1200,
         rename: { suffix: '-1200px' },
       },{
-        width: 1500
+        width: 1500,
+        rename: { suffix: '-default' },
       },{
         width: 2000,
         rename: { suffix: '-2000px' },
       },{
+        width: 2500,
+        rename: { suffix: '-2500px' },
+      },{
         height: 500,
         width: 500,
-        rename: { suffix: '-cover-500' },
+        rename: { suffix: '-cover-500px' },
       },{
         height: 800,
         width: 800,
-        rename: { suffix: '-cover-800' },
+        rename: { suffix: '-cover-800px' },
       },{
         height: 1200,
         width: 1200,
-        rename: { suffix: '-cover-1200' },
+        rename: { suffix: '-cover-1200px' },
+      },{
+        height: 1000,
+        width: 1000,
+        rename: { suffix: '-cover' },
       }]
     },{
       quality: 80,
@@ -51,11 +59,12 @@ gulp.task('images', function () {
       errorOnUnusedImage: false,
       errorOnEnlargement: false
     }))
-    .pipe(gulp.dest('images'))
+    .pipe(gulp.dest('photos'))
 })
 
 gulp.task("watch", function() {
   gulp.watch('./assets/scss/**/*.scss', gulp.parallel('css'));
+  gulp.watch('./uploads/**/*.{png,jpg}', gulp.parallel('images'));
 });
 
 gulp.task('dev', gulp.parallel('css'));

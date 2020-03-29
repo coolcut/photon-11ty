@@ -3,4 +3,4 @@ _site/
 node_modules/
 package-lock.json
 /_includes/css
-/images
+/photos
