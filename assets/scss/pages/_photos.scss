@@ -1,3 +1,82 @@
 /* ------------------------------------------------------------------
 ||  Photos
 ------------------------------------------------------------------- */
+.photo-grid {
+  display: grid;
+  grid-gap: var(--spacer-4);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-grid-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.16) 48%,
+      rgba(0, 0, 0, 0.64) 100%
+    );
+    transition: opacity 0.32s ease-in-out;
+  }
+}
+
+.photo-grid-item:hover,
+.photo-grid-item:focus {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 20;
+  }
+
+  .photo-grid-item__picture {
+    z-index: 10;
+    transform: scale(1.04);
+  }
+
+  .photo-grid-item__date {
+    visibility: visible;
+  }
+}
+
+.photo-grid-item__picture {
+  display: block;
+  margin: 0;
+  transition: transform 0.32s ease-in-out;
+
+  img {
+    display: block;
+  }
+}
+
+.photo-grid-item__date {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+
+  visibility: hidden;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  z-index: 20;
+}
