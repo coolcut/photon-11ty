@@ -3,10 +3,11 @@
 ------------------------------------------------------------------- */
 .photo-grid {
   display: grid;
-  grid-gap: var(--spacer-4);
+  grid-gap: var(--spacer-3);
   grid-template-columns: repeat(1, 1fr);
 
   @media (min-width: 640px) {
+    grid-gap: var(--spacer-4);
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -43,6 +44,10 @@
       rgba(0, 0, 0, 0.64) 100%
     );
     transition: opacity 0.32s ease-in-out;
+  }
+
+  &.animated {
+    animation-name: fadeInUp;
   }
 }
 

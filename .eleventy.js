@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addPassthroughCopy("photos");
+  eleventyConfig.addPassthroughCopy("assets/js");
   eleventyConfig.addPassthroughCopy("assets/fonts");
 
   eleventyConfig.addCollection("posts", function(collection) {
