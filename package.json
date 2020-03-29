@@ -7,7 +7,8 @@
   "author": "Jan Früchtl <jan@fruechtl.me>",
   "license": "MIT",
   "scripts": {
-    "dev": "gulp dev & gulp watch & eleventy --serve"
+    "dev": "gulp dev & gulp watch & eleventy --serve",
+    "build": "NODE_ENV=production gulp build && eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",

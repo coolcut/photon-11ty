@@ -4,6 +4,8 @@ const markdownIt = require("markdown-it");
 module.exports = function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
+  eleventyConfig.addPassthroughCopy("assets/fonts");
+
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
