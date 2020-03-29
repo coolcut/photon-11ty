@@ -17,3 +17,4 @@ gulp.task("watch", function() {
 });
 
 gulp.task('dev', gulp.parallel('css'));
+gulp.task('build', gulp.parallel('css'));
