@@ -1,8 +1,14 @@
 const fs = require("fs");
+const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRSS);
   eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.addCollection("posts", function(collection) {
+    return collection.getFilteredByGlob(["photos/*.md"]);
+  });
 
   let markdownLibrary = markdownIt({
     html: true,

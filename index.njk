@@ -8,41 +8,14 @@ layout: layouts/bones.njk
     <p class="page-slogan">{{ metadata.slogan }}</p>
   </header>
   <section class="photo-grid">
-    <a href="#" class="photo-grid-item">
+  {% set photos = collections.posts | reverse %}
+  {% for photo in photos %}
+    <a href="{{ photo.url | url }}" class="photo-grid-item">
       <figure class="photo-grid-item__picture">
-        <img src="https://fruechtl.me/uploads/photos/wave-and-stones-cover.jpg" alt="">
+        <img src="{{ photo.data.imageSource }}" alt="{{ photo.data.imageAlt }}">
       </figure>
-      <time class="photo-grid-item__date">March 2nd, 2020</time>
+      <time class="photo-grid-item__date" datetime="{{ photo.date }}">{{ photo.date }}</time>
     </a>
-    <a href="#" class="photo-grid-item">
-      <figure class="photo-grid-item__picture">
-        <img src="https://fruechtl.me/uploads/photos/stockholm-street-night-cover.jpg" alt="">
-      </figure>
-      <time class="photo-grid-item__date">March 2nd, 2020</time>
-    </a>
-    <a href="#" class="photo-grid-item">
-      <figure class="photo-grid-item__picture">
-        <img src="https://fruechtl.me/uploads/photos/stockholm-turm-cover.jpg" alt="">
-      </figure>
-      <time class="photo-grid-item__date">March 2nd, 2020</time>
-    </a>
-    <a href="#" class="photo-grid-item">
-      <figure class="photo-grid-item__picture">
-        <img src="https://fruechtl.me/uploads/photos/stockholm-city-cover.jpg" alt="">
-      </figure>
-      <time class="photo-grid-item__date">March 2nd, 2020</time>
-    </a>
-    <a href="#" class="photo-grid-item">
-      <figure class="photo-grid-item__picture">
-        <img src="https://fruechtl.me/uploads/photos/stockholm-tight-street-2-cover.jpg" alt="">
-      </figure>
-      <time class="photo-grid-item__date">March 2nd, 2020</time>
-    </a>
-    <a href="#" class="photo-grid-item">
-      <figure class="photo-grid-item__picture">
-        <img src="https://fruechtl.me/uploads/photos/many-grapevines-cover.jpg" alt="">
-      </figure>
-      <time class="photo-grid-item__date">March 2nd, 2020</time>
-    </a>
+  {% endfor %}
   </section>
 </main>
