@@ -14,7 +14,7 @@ layout: layouts/bones.njk
       <figure class="photo-grid-item__picture">
         <img src="{{ photo.data.imageSource }}" alt="{{ photo.data.imageAlt }}">
       </figure>
-      <time class="photo-grid-item__date" datetime="{{ photo.date }}">{{ photo.date }}</time>
+      <time class="photo-grid-item__date" datetime="{{ photo.date | machineReadableDate }}">{{ photo.date | readableDate }}</time>
     </a>
   {% endfor %}
   </section>

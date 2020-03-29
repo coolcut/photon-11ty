@@ -1,3 +1,4 @@
+const moment = require("moment");
 const fs = require("fs");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
@@ -8,6 +9,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob(["photos/*.md"]);
+  });
+
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return moment.utc(dateObj).format("MMMM Do, YYYY");
+  });
+
+  eleventyConfig.addFilter('machineReadableDate', (dateObj) => {
+    return moment.utc(dateObj).format("YYYY-MM-DD");
   });
 
   let markdownLibrary = markdownIt({

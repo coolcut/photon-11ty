@@ -84,11 +84,11 @@
   left: var(--spacer-3);
   bottom: var(--spacer-3);
 
-  font-size: var(--type-scale-8);
+  font-size: var(--type-scale-7);
+  font-weight: bold;
   line-height: var(--leading-tight);
   visibility: hidden;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: #ffffff;
   z-index: 20;
 }
