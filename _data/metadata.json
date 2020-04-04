@@ -1,8 +1,8 @@
 {
   "language": "en",
   "title": "A Photo Blog",
-  "url": "http://localhost:8080",
-  "feedUrl": "http://localhost:8080/feed.xml",
+  "url": "https://photon-11ty.netlify.com",
+  "feedUrl": "https://photon-11ty.netlify.com/feed.xml",
   "slogan": "My personal stream of photos.",
   "favicon": "🖼",
   "author": {
@@ -11,6 +11,6 @@
   },
   "seo": {
     "title": "A Photo Blog",
-    "description": "<Your SEO description>"
+    "description": "Your SEO description"
   }
 }
