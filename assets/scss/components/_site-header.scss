@@ -1,3 +1,55 @@
 /* ------------------------------------------------------------------
 ||  Site Header
 ------------------------------------------------------------------- */
+.page-header {
+  margin: 0 0 var(--spacer-6);
+
+  @media (min-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.page-header-content {
+  margin: 0 0 var(--spacer-3);
+  @media (min-width: 640px) {
+    margin: 0;
+  }
+}
+
+.page-title {
+  margin-bottom: var(--spacer-3);
+  font-size: var(--type-scale-3);
+  font-weight: 900;
+  line-height: var(--leading-tight);
+}
+
+.page-slogan {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------
+||  Site Header - Navigation
+------------------------------------------------------------------- */
+.page-social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-social-item {
+  margin-left: var(--spacer-3);
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.page-social-item-icon {
+  display: block;
+  height: var(--spacer-3);
+  width: var(--spacer-3);
+  fill: var(--basic-text-color);
+}
