@@ -30,8 +30,11 @@
   const ESCAPE = 27;
 
 
-  const closePhoto = (href) => {
-    window.history.pushState({}, '', href);
+  const closePhoto = () => {
+    const photo = document.querySelector(".photo-frame");
+    const photoId = photo.dataset.id;
+
+    location.replace('/#' + photoId);
   }
 
   const handleKey = (keyCode, event, callback) => {
@@ -43,7 +46,7 @@
 
   document.addEventListener('keydown', (event) => {
     handleKey(ESCAPE, event, () => {
-      console.log("Test")
+      closePhoto()
     });
   });
 })();
