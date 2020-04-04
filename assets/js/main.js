@@ -1,3 +1,6 @@
+/* ------------------------------------------------------------------
+||  Photo Entrance Animation
+------------------------------------------------------------------- */
 (function() {
   const images = document.querySelectorAll('.photo-grid-item');
   var animationItemDelay = .12;
@@ -18,4 +21,29 @@
   images.forEach(image => {
     observer.observe(image)
   })
+})();
+
+/* ------------------------------------------------------------------
+||  Keyboard Shortcuts
+------------------------------------------------------------------- */
+(function() {
+  const ESCAPE = 27;
+
+
+  const closePhoto = (href) => {
+    window.history.pushState({}, '', href);
+  }
+
+  const handleKey = (keyCode, event, callback) => {
+    if (event.keyCode === keyCode) {
+      callback();
+      event.preventDefault();
+    }
+  }
+
+  document.addEventListener('keydown', (event) => {
+    handleKey(ESCAPE, event, () => {
+      console.log("Test")
+    });
+  });
 })();
