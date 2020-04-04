@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
   <link href="{{ metadata.url }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
-  <id>{{ metadata.photoFeed.id }}</id>
+  <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
   {%- for photo in collections.posts %}
   {% set absolutePostUrl %}{{ photo.url | url | absoluteUrl(metadata.url) }}{% endset %}
 	<entry>
-		<title>{{ photo.data.title }}</title>
+		<title>{{ photo.data.caption }}</title>
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ photo.date | rssDate }}</updated>
 		<id>{{ absolutePostUrl }}</id>

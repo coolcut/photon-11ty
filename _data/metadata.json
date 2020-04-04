@@ -1,12 +1,12 @@
 {
   "language": "en",
   "title": "A Photo Blog",
-  "url": "",
+  "url": "http://localhost:8080",
   "slogan": "My personal stream of photos.",
   "favicon": "🖼",
   "author": {
-    "name": "<Your Name>",
-    "email": "<Your Email>"
+    "name": "Your Name",
+    "email": "your@email.com"
   },
   "seo": {
     "title": "A Photo Blog",
