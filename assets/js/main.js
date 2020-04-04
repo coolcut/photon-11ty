@@ -28,6 +28,8 @@
 ------------------------------------------------------------------- */
 (function() {
   const ESCAPE = 27;
+  const RIGHTARROW = 39;
+  const LEFTARROW = 37;
 
 
   const closePhoto = () => {
@@ -35,6 +37,22 @@
     const photoId = photo.dataset.id;
 
     location.replace('/#' + photoId);
+  }
+
+  const nextPhoto = () => {
+    const nextPhotoButton = document.querySelector(".photo-nav-link--next")
+
+    if(nextPhotoButton) {
+      location.replace(nextPhotoButton.href);
+    }
+  }
+
+  const prevPhoto = () => {
+    const prevPhotoButton = document.querySelector(".photo-nav-link--prev")
+
+    if(prevPhotoButton) {
+      location.replace(prevPhotoButton.href);
+    }
   }
 
   const handleKey = (keyCode, event, callback) => {
@@ -47,6 +65,14 @@
   document.addEventListener('keydown', (event) => {
     handleKey(ESCAPE, event, () => {
       closePhoto()
+    });
+
+    handleKey(RIGHTARROW, event, () => {
+      prevPhoto()
+    });
+
+    handleKey(LEFTARROW, event, () => {
+      nextPhoto()
     });
   });
 })();
