@@ -4,10 +4,15 @@
 .photo-grid {
   display: grid;
   grid-gap: var(--spacer-3);
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
 
   @media (min-width: 640px) {
     grid-gap: var(--spacer-4);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }
 

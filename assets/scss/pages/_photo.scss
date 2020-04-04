@@ -13,8 +13,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
-  color: #fff;
+  background: var(--background-color);
+  color: var(--basic-text-color);
 }
 
 .photo-frame__image {
@@ -30,16 +30,9 @@
 .photo-nav-link {
   display: flex;
   align-items: center;
-  padding: 0 var(--spacer-4);
-  width: var(--spacer-8);
+  padding: 0 var(--spacer-3);
+  width: var(--spacer-6);
   height: 100vh;
-
-  .photo-nav-item {
-    opacity: 0;
-    visibility: hidden;
-    transform: matrix(-1, 0, 0, 1, 0, 0) scale(0.8);
-    transition: all 0.16s ease-in-out;
-  }
 
   &:hover,
   &:focus {
@@ -48,6 +41,11 @@
       visibility: visible;
       transform: matrix(-1, 0, 0, 1, 0, 0) scale(1);
     }
+  }
+
+  @media (min-width: 640px) {
+    padding: 0 var(--spacer-4);
+    width: var(--spacer-8);
   }
 }
 
@@ -78,11 +76,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--spacer-5);
-  height: var(--spacer-5);
+  width: var(--spacer-4);
+  height: var(--spacer-4);
   background: rgba(255, 255, 255, 0.48);
   backdrop-filter: blur(20px);
   border-radius: 50%;
+  transition: all 0.16s ease-in-out;
+  transform: matrix(-1, 0, 0, 1, 0, 0) scale(1);
+
+  @media (min-width: 640px) {
+    width: var(--spacer-5);
+    height: var(--spacer-5);
+    opacity: 0;
+    visibility: hidden;
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(0.8);
+  }
 
   &:hover,
   &:focus {
