@@ -1,11 +1,12 @@
 {
   "language": "en",
   "title": "A Photo Blog",
-  "url": "#",
+  "url": "",
   "slogan": "My personal stream of photos.",
   "favicon": "🖼",
   "author": {
-    "name": "<Your Name>"
+    "name": "<Your Name>",
+    "email": "<Your Email>"
   },
   "seo": {
     "title": "A Photo Blog",
