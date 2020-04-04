@@ -9,7 +9,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("photos");
   eleventyConfig.addPassthroughCopy("assets/js");
-  eleventyConfig.addPassthroughCopy("assets/fonts");
 
   eleventyConfig.addCollection("posts", function(collection) {
     return collection.getFilteredByGlob(["posts/*.md"]);
