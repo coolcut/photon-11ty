@@ -6,7 +6,7 @@ bodyClass: photo
 {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.posts | getNextCollectionItem(page) %}
 
-<figure class="photo-frame">
+<figure id="{{ caption | slug }}" class="photo-frame">
   <img class="photo-frame__image" srcset='{{ imageSource | photoSrcset }}' src="{{ imageSource | photoSrc }}" alt="{{ imageAlt }}">
 </figure>
 

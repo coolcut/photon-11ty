@@ -10,7 +10,7 @@ layout: layouts/bones.njk
   <section class="photo-grid">
   {% set photos = collections.posts | reverse %}
   {% for photo in photos %}
-    <a href="{{ photo.url | url }}" class="photo-grid-item">
+    <a id="{{ photo.data.caption | slug }}" href="{{ photo.url | url }}" class="photo-grid-item">
       <figure class="photo-grid-item__picture">
         <img srcset="{{ photo.data.imageSource | gridItemSrcset }}" src="{{ photo.data.imageSource | gridItemSrc }}" alt="{{ photo.data.imageAlt }}" height="500" width="500" loading="lazy">
       </figure>
