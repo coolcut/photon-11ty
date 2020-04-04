@@ -12,5 +12,9 @@
   "seo": {
     "title": "A Photo Blog",
     "description": "Your SEO description"
+  },
+  "social": {
+    "twitter": "#",
+    "instagram": "#"
   }
 }
