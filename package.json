@@ -1,9 +1,9 @@
 {
-  "name": "minne-11ty",
+  "name": "photon-11ty",
   "version": "0.1.0",
-  "description": "This is a 11ty implementation of the minne photo blog",
+  "description": "This is a 11ty implementation of the photon photo blog",
   "main": "index.js",
-  "repository": "git@github.com:useminne/minne-11ty.git",
+  "repository": "git@github.com:usephoton/photon-11ty.git",
   "author": "Jan Früchtl <jan@fruechtl.me>",
   "license": "MIT",
   "scripts": {
