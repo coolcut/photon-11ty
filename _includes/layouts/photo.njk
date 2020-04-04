@@ -2,6 +2,24 @@
 layout: layouts/bones.njk
 ---
 
-<figure>
-  <img srcset='{{ imageSource | photoSrcset }}' src="{{ imageSource | photoSrc }}" alt="{{ imageAlt }}">
+{% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
+
+<figure class="photo-frame">
+  <img class="photo-frame__image" srcset='{{ imageSource | photoSrcset }}' src="{{ imageSource | photoSrc }}" alt="{{ imageAlt }}">
 </figure>
+
+{% if previousPost %}
+  <a class="photo-nav-link photo-nav-link--prev" href="{{ previousPost.url }}">
+    <div class="photo-nav-item">
+      <svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M19.5 12l-2.05545e-08-1.65591e-05c.000823739.661702-.283382 1.2917-.779988 1.72901l-11.152 9.81101 2.72441e-08-2.28607e-08c-.781416.655691-1.94642.553771-2.60211-.227646 -.634218-.755826-.562392-1.87666.163114-2.54535l9.752-8.579 -4.98004e-09 4.36523e-09c.10383-.0910114.114221-.248961.0232092-.352791 -.00721965-.00823646-.0149728-.0159896-.0232092-.0232092l-9.752-8.579 7.8278e-08 7.21481e-08c-.750069-.691331-.797686-1.85982-.106354-2.60989 .668691-.725505 1.78953-.797332 2.54535-.163114l11.148 9.808 8.01003e-08 7.04841e-08c.497811.438047.78337 1.0689.784 1.732Z" fill="#000"></path></svg>
+    </div>
+  </a>
+{% endif %}
+{% if nextPost %}
+  <a class="photo-nav-link photo-nav-link--next" href="{{ nextPost.url }}">
+    <div class="photo-nav-item">
+      <svg version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4.5 12l2.07162e-08 1.6689e-05c-.000823776-.661702.283382-1.2917.779987-1.72901l11.152-9.81101 -1.50937e-07 1.26652e-07c.781416-.655691 1.94642-.553771 2.60211.227645 .634218.755826.562392 1.87666-.163113 2.54535l-9.752 8.579 1.09559e-08-9.60336e-09c-.10383.0910114-.114221.248961-.0232092.352791 .00721965.00823646.0149728.0159896.0232092.0232092l9.752 8.579 2.72441e-08 2.28607e-08c.781416.655691.883337 1.8207.227646 2.60211 -.655691.781416-1.8207.883337-2.60211.227646 -.021948-.0184167-.0434645-.0373416-.064532-.0567593l-11.148-9.808 -1.50156e-07-1.32129e-07c-.497811-.438047-.78337-1.0689-.784-1.732Z" fill="#000"></path></svg>
+    </div>
+  </a>
+{% endif %}

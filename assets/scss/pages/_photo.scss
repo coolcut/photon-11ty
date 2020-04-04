@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------------
+||  Photo
+------------------------------------------------------------------- */
+.photo-frame {
+  margin: 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  color: #fff;
+}
+
+.photo-frame__image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+/* ------------------------------------------------------------------
+||  Photo - Navigation
+------------------------------------------------------------------- */
+.photo-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacer-4);
+  width: var(--spacer-8);
+  height: 100vh;
+
+  .photo-nav-item {
+    opacity: 0;
+    visibility: hidden;
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(0.8);
+    transition: all 0.16s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    .photo-nav-item {
+      opacity: 1;
+      visibility: visible;
+      transform: matrix(-1, 0, 0, 1, 0, 0) scale(1);
+    }
+  }
+}
+
+.photo-nav-link--prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .photo-nav-item svg {
+    position: relative;
+    left: 1px;
+  }
+}
+
+.photo-nav-link--next {
+  position: absolute;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+
+  .photo-nav-item svg {
+    position: relative;
+    right: 1px;
+  }
+}
+
+.photo-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacer-5);
+  height: var(--spacer-5);
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  svg {
+    width: var(--spacer-3);
+    height: var(--spacer-3);
+  }
+}
