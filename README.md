@@ -24,8 +24,8 @@
 3. Add a high-resolution version of your photos inside the `/uploads` directory (don't do any image optimisation beforehand, everything will be done for you later)
 4. Deploy the version you've forked to Netlify
 5. Change your Netlify build settings
-   5.1. Change your `build command` to `yarn build`
-   5.2. Change your `publish directory` to `_site`
+5.1. Change your `build command` to `yarn build`
+5.2. Change your `publish directory` to `_site`
 6. Be happy!
 
 ## How to use Photon?
