@@ -5,6 +5,7 @@
 - Features
 - How to install Photon?
 - How to use Photon?
+- Customize
 - Roadmap
 
 ## Features
@@ -48,6 +49,20 @@ imageAlt: This is the alt text
 - `caption`: A simple caption for your image
 - `imageSource`: Reference the file name of the photo you want to reference. Photo looks inside `/uploads` to find it.
 - `imageAlt`: Add a simple alternative text describing the image for people who might benefit from this because of disabilities.
+
+## Customize
+
+- `language`: Add the HTML language code to tell the primary language you are using on your site to the browser. Default `en`
+- `title`: Give your site a proper title
+- `url`: Enter the url your site is going to live on
+- `slogan`: Give your site a quick summary. This will be available on your homepage.
+- `favicon`: Customise your favicon with an emoji
+- `author.name`: Add your name here
+- `author.email`: Add your email address here, so people can contact you if you want
+- `seo.title`: Add a seo title here. This will be used on the homepage.
+- `seo.description`: Add a seo description here. This will be used on the homepage.
+- `social.twitter`: If you want to link to your twitter account, add it here. A reference will be displayed in the homepage.
+- `social.instagram`: If you want to link to your instagram account, add it here. A reference will be displayed in the homepage.
 
 ## Roadmap
 
