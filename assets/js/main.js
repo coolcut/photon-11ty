@@ -2,13 +2,9 @@
 ||  Image lazy loading
 ------------------------------------------------------------------- */
 (function() {
-  const observer = lozad('.photo-grid-item__picture-src', {
-    rootMargin: '16px 0px',
-    threshold: 0.1
-  });
-  observer.observe();
+  let images = document.querySelectorAll(".photo-grid-item__picture-src");
+  lazyload(images);
 })();
-
 
 /* ------------------------------------------------------------------
 ||  Photo Entrance Animation
