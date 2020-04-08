@@ -1,15 +1,4 @@
 /* ------------------------------------------------------------------
-||  Image lazy loading
-------------------------------------------------------------------- */
-(function() {
-  const images = document.querySelectorAll(".photo-grid-item__picture-src");
-  lazyload(images, {
-    rootMargin: '50px 0px',
-    threshold: 0.01
-  });
-})();
-
-/* ------------------------------------------------------------------
 ||  Photo Entrance Animation
 ------------------------------------------------------------------- */
 (function() {
