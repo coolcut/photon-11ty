@@ -2,8 +2,11 @@
 ||  Image lazy loading
 ------------------------------------------------------------------- */
 (function() {
-  let images = document.querySelectorAll(".photo-grid-item__picture-src");
-  lazyload(images);
+  const images = document.querySelectorAll(".photo-grid-item__picture-src");
+  lazyload(images, {
+    rootMargin: '50px 0px',
+    threshold: 0.01
+  });
 })();
 
 /* ------------------------------------------------------------------

@@ -37,7 +37,7 @@ layout: layouts/bones.njk
   {% for photo in photos %}
     <a id="{{ photo.data.caption | slug }}" href="{{ photo.url | url }}" class="photo-grid-item">
       <figure class="photo-grid-item__picture">
-        <img class="photo-grid-item__picture-src" data-srcset="{{ photo.data.imageSource | gridItemSrcset }}" data-src="{{ photo.data.imageSource | gridItemSrc }}" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" alt="{{ photo.data.imageAlt }}" height="500" width="500">
+        <img class="photo-grid-item__picture-src" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-srcset="{{ photo.data.imageSource | gridItemSrcset }}" data-src="{{ photo.data.imageSource | gridItemSrc }}" alt="{{ photo.data.imageAlt }}" height="500" width="500">
       </figure>
       <time class="photo-grid-item__date" datetime="{{ photo.date | machineReadableDate }}">{{ photo.date | readableDate }}</time>
     </a>
