@@ -27,6 +27,8 @@
 ||  Keyboard Shortcuts
 ------------------------------------------------------------------- */
 (function() {
+  const imageView = document.querySelector('.photo');
+
   const ESCAPE = 27;
   const RIGHTARROW = 39;
   const LEFTARROW = 37;
@@ -62,17 +64,23 @@
     }
   }
 
-  document.addEventListener('keydown', (event) => {
-    handleKey(ESCAPE, event, () => {
+  if(imageView) {
+    document.addEventListener('keydown', (event) => {
+      handleKey(ESCAPE, event, () => {
+        closePhoto()
+      });
+
+      handleKey(RIGHTARROW, event, () => {
+        prevPhoto()
+      });
+
+      handleKey(LEFTARROW, event, () => {
+        nextPhoto()
+      });
+    });
+
+    imageView.addEventListener("click", () => {
       closePhoto()
-    });
-
-    handleKey(RIGHTARROW, event, () => {
-      prevPhoto()
-    });
-
-    handleKey(LEFTARROW, event, () => {
-      nextPhoto()
-    });
-  });
+    })
+  }
 })();
