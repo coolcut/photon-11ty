@@ -2,12 +2,14 @@
 ||  Site Header
 ------------------------------------------------------------------- */
 .page-header {
+  display: grid;
+  grid-gap: var(--spacer-4);
+  grid-template-columns: repeat(1, 1fr);
   margin: 0 0 var(--spacer-6);
 
   @media (min-width: 640px) {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -27,11 +29,17 @@
 
 .page-slogan {
   margin: 0;
+  color: var(--body-text-color);
 }
 
 /* ------------------------------------------------------------------
 ||  Site Header - Navigation
 ------------------------------------------------------------------- */
+.page-social-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .page-social-list {
   display: flex;
   margin: 0;
