@@ -76,4 +76,8 @@ imageAlt: This is the alt text
 - iOS Shortcut for optimised uploading from your iPhone
 - Support for Netlify deploy button
 - Detailed open graph support
+- Webmentions (Maybe)
+- Web sharing API integration (Maybe)
+- PWA/Service worker support (Maybe)
+- Offline support (Maybe)
 - you have an ideas, please [add it to the open isses](https://github.com/usephoton/photon-11ty/issues/new)
