@@ -2,11 +2,17 @@
 
 "Photon 11ty" is a very fast and straightforward way of publishing your photos with [11ty](https://www.11ty.dev). The process is easy while the website is blazing fast and comes without any tracking or other junk.
 
+- Quick deploy
 - Features
 - How to install Photon?
 - How to use Photon?
 - Customize
 - Roadmap
+
+## Quick deploy
+You can get started very quickly be by deploying `Photon - 11ty` to Netlify.
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/usephoton/photon-11ty"><img src="https://www.netlify.com/img/deploy/button.svg" alt=""></a>
 
 ## Features
 
