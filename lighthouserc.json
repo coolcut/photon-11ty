@@ -1,0 +1,8 @@
+{
+  "ci": {
+    "url": ["http://localhost/", "http://localhost/posts/test-10/"],
+    "collect": {
+      "staticDistDir": "./_site"
+    }
+  }
+}
