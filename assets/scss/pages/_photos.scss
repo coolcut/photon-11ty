@@ -36,6 +36,10 @@
       rgba(0, 0, 0, 0.64) 100%
     );
     transition: opacity 0.32s ease-in-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   &.animated {
@@ -60,6 +64,10 @@
   .photo-grid-item__picture {
     z-index: 10;
     transform: scale(1.04);
+
+    @media (prefers-reduced-motion: reduce) {
+      transform: scale(1);
+    }
   }
 
   .photo-grid-item__date {
@@ -71,6 +79,10 @@
   display: block;
   margin: 0;
   transition: transform 0.32s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 
   img {
     display: block;
