@@ -2,12 +2,26 @@
 <html lang="{{ metadata.language }}">
 <head>
   <meta charset="utf-8">
-  <title>{{ metadata.seo.title }}</title>
+  <title>{{ caption or metadata.seo.title }}</title>
   <meta name="description" content="{{ metadata.seo.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="alternate" type="application/rss+xml" title="RSS Feed - {{ metadata.title }}" href="{{ metadata.feedUrl }}" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ metadata.favicon }}</text></svg>">
+
+  <meta property="og:title" content="{{ caption or metadata.seo.title }}">
+  <meta property="og:site_name" content="{{ metadata.title }}">
+  {% if layout == "layouts/photo.njk" %}
+  <meta property="og:image" content="{{ metadata.url }}{{ imageSource | photoSrc }}">
+  {% endif %}
+  <meta property="og:url" content="{{ metadata.url }}">
+
+  <meta name="twitter:title" content="{{ caption or metadata.title }}">
+  {% if layout == "layouts/photo.njk" %}
+  <meta name="twitter:image" content="{{ metadata.url }}{{ imageSource | photoSrc }}">
+  <meta name="twitter:image:alt" content="{{ imageAlt }}">
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
 
   <style>{% include "css/main.css" %}</style>
 </head>
