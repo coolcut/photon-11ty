@@ -93,7 +93,7 @@ imageAlt: This is the alt text
 
 ## Credits
 
-This project is based on the fantastic [11ty](https://www.11ty.dev). I got a little inspiration from the awesome [Photo Stream](https://github.com/maxvoltar/photo-stream) project made by [Tim Van Damme](https://twitter.com/maxvoltar).
+This project is based on the fantastic [11ty](https://www.11ty.dev). It was a little inspired by the awesome [Photo Stream](https://github.com/maxvoltar/photo-stream) project made by [Tim Van Damme](https://twitter.com/maxvoltar).
 
 ## License
 
