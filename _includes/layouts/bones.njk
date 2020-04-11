@@ -14,7 +14,7 @@
   {% if layout == "layouts/photo.njk" %}
   <meta property="og:image" content="{{ metadata.url }}{{ imageSource | photoSrc }}">
   {% endif %}
-  <meta property="og:url" content="{{ metadata.url }}">
+  <meta property="og:url" content="{{ metadata.url }}{{ page.url | url }}">
 
   <meta name="twitter:title" content="{{ caption or metadata.title }}">
   {% if layout == "layouts/photo.njk" %}
