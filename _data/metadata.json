@@ -1,9 +1,9 @@
 {
   "language": "en",
-  "title": "A Photo Blog",
+  "title": "A Photon Photo Blog",
   "url": "https://photon-11ty.netlify.com",
   "feedUrl": "https://photon-11ty.netlify.com/feed.xml",
-  "slogan": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  "slogan": "This photo blog is a 11ty template. It is open-source and an is a fast and straightforward way to publish your photos. All these photos you see here are examples copied from Unsplash.",
   "favicon": "🖼",
   "author": {
     "name": "Your Name",
