@@ -5,7 +5,7 @@
   const images = document.querySelectorAll('.photo-grid-item');
   var animationItemDelay = .12;
 
-  observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
     var itemsLoaded = 0;
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {

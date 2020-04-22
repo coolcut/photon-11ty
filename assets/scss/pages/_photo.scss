@@ -85,6 +85,10 @@
   transition: all 0.16s ease-in-out;
   transform: matrix(-1, 0, 0, 1, 0, 0) scale(1);
 
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
   @media (min-width: 640px) {
     width: var(--spacer-5);
     height: var(--spacer-5);

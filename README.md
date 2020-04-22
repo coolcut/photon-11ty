@@ -26,11 +26,14 @@ You can get started very quickly by deploying `Photon - 11ty` to Netlify. Press 
 ## Features
 
 - Pre-optimized image resolutions based on the need of your visitor.
+- Improved lazy loading of your images
 - Every photo has its own URL
+- Basic open graph support
 - Support for light and dark themes (based on the settings of your visitor)
 - Keyboard shortcuts
 - RSS feed
 - Option for adding other social media references
+- Support for Netlify deploy button
 
 ## How to install Photon?
 
@@ -81,10 +84,7 @@ imageAlt: This is the alt text
 
 ## Roadmap
 
-- Improved lazy loading of your images
 - iOS Shortcut for optimized uploading from your iPhone
-- Support for Netlify deploy button
-- Detailed open graph support
 - Webmentions (Not decided yet)
 - Web sharing API integration (Not decided yet)
 - PWA/Service worker support (Not decided yet)
