@@ -15,7 +15,7 @@ Photon is a fast and straightforward way to publish your photos with [11ty](http
 
 ## Example
 
-A live example, running the master branch of this repository, is available on [photon-11ty.netlify.com](https://photon-11ty.netlify.com).
+A live example, running the main branch of this repository, is available on [photon-11ty.netlify.com](https://photon-11ty.netlify.com).
 
 ## Quick deploy
 
