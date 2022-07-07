@@ -23,6 +23,6 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "markdown-it": "^12.0.2",
-    "moment": "^2.29.1"
+    "moment": "^2.29.4"
   }
 }
